@@ -1,6 +1,6 @@
 {
     "name": "diego-ninja/banthis",
-    "description": "Library to easily handle profanity filtering in PHP projects.",
+    "description": "A censor and word filtering library for PHP 8.2+",
 	"keywords": ["profanity", "filter", "strings", "swear", "language"],
 	"license": "AGPL-3.0",
     "homepage": "https://github.com/diego-ninja/banthis",
