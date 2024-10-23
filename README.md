@@ -45,6 +45,46 @@ Array
 
 ```
 
+### Setting the Dictionary
+
+You can set or add dictionaries to the Censor instance.
+
+```php
+// Set a new dictionary
+$censor->setDictionary($dictionary);
+
+// Add words from another dictionary
+$additionalDictionary = Dictionary::withLanguage('fr');
+$censor->addDictionary($additionalDictionary);
+```
+
+### Adding words from an array
+
+You can add words directly from an array.
+
+```php
+$words = ['badword1', 'badword2'];
+$censor->addFromArray($words);
+```
+
+### Managing the whitelist
+
+You can add words to the whitelist to exclude them from being censored.
+
+```php
+$whitelist = ['goodword1', 'goodword2'];
+$censor->whitelist($whitelist);
+```
+
+### Setting the replacement character
+
+You can set the character or string that will replace the censored words.
+
+```php
+$censor->setReplaceChar('*');
+```
+
+
 ## ⚙️ How it works
 
 In a nutshell, this code takes an array of bad words and compares it to an array of common filter-evasion tactics. It then does a string replacement to insert regex parameters into your badwords array, and then evaluates your input string to that expanded banned word list.
