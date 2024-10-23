@@ -64,7 +64,7 @@ You can add words directly from an array.
 
 ```php
 $words = ['badword1', 'badword2'];
-$censor->addFromArray($words);
+$censor->addWords($words);
 ```
 
 ### Managing the whitelist
@@ -110,7 +110,7 @@ This means that the following all evaluate to the "bitch":
 - and so on....
 
 ## 🔬 Tests
-To run the unit tests on this package, simply run `vendor/bin/phpunit` from the package directory.
+To run the unit tests on this package, run `vendor/bin/phpunit` from the package directory.
 
 
 ## 🙏 Credits
